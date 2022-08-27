@@ -14,6 +14,7 @@ local egg = serv:Channel("EGG")
 
 btns:Toggle("Farm Box -- (ถ้าไม่วาปแปลว่ากล่องไม่เกิด)", nil, function(value)
 _G.Farm = value
+_G.TP = value
 end)
 
 btns:Toggle("TP Part ไป กล่องอื่น อัตโนมัติ", nil, function(value)
@@ -49,7 +50,7 @@ spawn(function()
 for i,v in pairs(game:GetService("Workspace").BossFightHitboxes:GetDescendants()) do
    if v.Name == "ForceField" then 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
-wait(5)
+wait(180)
 end
 end
 end)

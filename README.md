@@ -4,9 +4,9 @@
 
 local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
 
-local win = DiscordLib:Window("z Aegona Hub z Script V.Beta")
+local win = DiscordLib:Window("discord library")
 
-local serv = win:Server("⛏️ Mining Clicker Simulator", " Test")
+local serv = win:Server("z Aegona Hub z Script V.Beta", " Test")
 
 local btns = serv:Channel("Auto - Farm")
 local tp = serv:Channel("TP")
@@ -14,6 +14,10 @@ local egg = serv:Channel("EGG")
 
 btns:Toggle("Farm Box -- (ถ้าไม่วาปแปลว่ากล่องไม่เกิด)", nil, function(value)
 _G.Farm = value
+end)
+
+btns:Toggle("ระบบ ใหม่ Test function", nil, function(value)
+_G.TP = value
 end)
 
 btns:Button(" วาป ออก จาก กล่อง ", function()
@@ -63,13 +67,23 @@ spawn(function()
             while wait() do 
                 if _G.eggdemon then
                     while _G.eggdemon do wait()  
+
 local args = {
     [1] = "Demon Egg",
     [2] = 4
 }
 
 game:GetService("ReplicatedStorage").Remotes.buyEgg:InvokeServer(unpack(args))
+
 end
+end
+end
+end)
+
+spawn(function()
+            while wait(2) do 
+                if _G.TP then
+        Instance.new("ForceField",game:GetService("Workspace").BossFightHitboxes.HitBox)
 end
 end
 end)

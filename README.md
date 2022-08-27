@@ -16,7 +16,7 @@ btns:Toggle("Farm Box -- (ถ้าไม่วาปแปลว่ากล่
 _G.Farm = value
 end)
 
-btns:Toggle("ระบบ ใหม่ Test function", nil, function(value)
+btns:Toggle("TP Part ไป กล่องอื่น อัตโนมัติ", nil, function(value)
 _G.TP = value
 end)
 
@@ -24,9 +24,7 @@ btns:Button(" วาป ออก จาก กล่อง ", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(54.55238342285156, 82.46776580810547, 746.6566162109375)
 end)
 
-btns:Button("! TP Part กดครั่งเดียว !", function()
-Instance.new("ForceField",game:GetService("Workspace").BossFightHitboxes.HitBox)
-end)
+
 
 tp:Button("TP Demon ", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(123.56641387939453, 73.42591094970703, 890.6080322265625)
@@ -51,6 +49,7 @@ spawn(function()
 for i,v in pairs(game:GetService("Workspace").BossFightHitboxes:GetDescendants()) do
    if v.Name == "ForceField" then 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+wait(5)
 end
 end
 end)

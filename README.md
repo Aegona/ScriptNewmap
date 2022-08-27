@@ -65,7 +65,7 @@ spawn(function()
                     while _G.eggdemon do wait()  
 local args = {
     [1] = "Demon Egg",
-    [2] = 1
+    [2] = 4
 }
 
 game:GetService("ReplicatedStorage").Remotes.buyEgg:InvokeServer(unpack(args))
